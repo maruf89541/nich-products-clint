@@ -1,0 +1,28 @@
+.add-service form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 5px 10px  #ff7c5b;
+    width: 60%;
+    margin: 30px auto;
+    padding: 30px 0;
+}
+
+.add-service input,textarea{
+    width: 80%;
+    margin-top: 10px;
+    line-height: 30px;
+    border: 1px solid gray ;
+    border-radius: 5px ;
+}
+.add-service button{
+border: none;
+border-radius: 5px;
+padding: 10px;
+width: 80%;
+margin-top: 10px;
+}
+/* .add-service form input  :focus{
+    border: 1px solid #ff7c5b;
+} */
