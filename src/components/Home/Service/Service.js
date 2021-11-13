@@ -18,7 +18,7 @@ const Service = ({ service }) => {
                 <p>{description}</p> */}
 
             <div className="product-wrapper mb-45 text-center">
-                <div className="product-img"> <a href="#" data-abc="true"> <img src={img} alt="" /> </a> <span className="text-center fw-bold"><i className="fa fa-rupee"></i> $ {price}</span>
+                <div className="product-img"> <a href="#" data-abc="true"> <img src={img} alt="" /> </a> <span className="text-center fw-bold"> $ {price}</span>
                     <div className="product-action">
                         <h5 text-center className="text-primary fw-bold">{name}</h5>
                         <div className="product-action-style"> <a href="#"> <i className="fa fa-plus"></i> </a> <a href="#"> <i className="fa fa-heart"></i> </a>

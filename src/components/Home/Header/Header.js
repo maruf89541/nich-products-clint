@@ -15,9 +15,9 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand href="#home" className="bg-white pe-2 border rounded"><img style={{ height: '35px', width: '150px' }} src="https://i.ibb.co/LtB9qW2/logo-color.webp" alt=""></img></Navbar.Brand>
                     <Navbar.Toggle />
-                    <Navbar.Collapse className="justify-content-end ms-auto">
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/services">service</Nav.Link>
+                    <Navbar.Collapse className="justify-content-end ms-auto text-dark">
+                        <Nav.Link as={Link} to="/" className="text-dark fw-bold">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/services" className="text-dark fw-bold">service</Nav.Link>
                         {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
                         {
                             user?.email &&
@@ -29,7 +29,7 @@ const Header = () => {
                         {user?.email ?
                             <Stack direction="horizontal" gap={2}>
                                 < Nav.Link as={Link} to="/aDashBoard" className="d-inline" ><Button className="regular-btn" variant="outline-secondary">Dash Baord<i class="fas fa-angle-right"></i></Button>{' '}</Nav.Link>
-                                < Nav.Link className="d-inline"><Button className="d-inline" onClick={logout} variant="outline-secondary">Log out</Button>{' '}</Nav.Link>
+                                < Nav.Link className="d-inline"><Button className="d-inline" onClick={logout} variant="outline-secondary"><i class="fas fa-sign-out-alt"></i></Button>{' '}</Nav.Link>
                             </Stack> :
                             <Nav.Link as={Link} to="/login"><Button variant="outline-secondary">Login</Button>{' '}</Nav.Link>
 

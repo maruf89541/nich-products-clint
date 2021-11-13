@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AddService from '../AddService';
 import Banner from '../Banner/Banner';
 import MainPd from '../Mainpd/MainPd';
+import Review from '../Riveiw/Review';
 import Service from '../Service/Service';
 import Services from '../Services/Services';
 
@@ -32,7 +33,7 @@ const Home = () => {
                     }
                 </div >
             </div>
-            <AddService></AddService>
+            <Review></Review>
         </div>
     );
 };
