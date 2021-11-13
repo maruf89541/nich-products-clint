@@ -28,7 +28,7 @@ const Header = () => {
 
                         {user?.email ?
                             <Stack direction="horizontal" gap={2}>
-                                < Nav.Link as={Link} to="/aDashBoard" className="d-inline" ><Button className="regular-btn" variant="outline-secondary">Admin<i class="fas fa-angle-right"></i></Button>{' '}</Nav.Link>
+                                < Nav.Link as={Link} to="/aDashBoard" className="d-inline" ><Button className="regular-btn" variant="outline-secondary">Dash Baord<i class="fas fa-angle-right"></i></Button>{' '}</Nav.Link>
                                 < Nav.Link className="d-inline"><Button className="d-inline" onClick={logout} variant="outline-secondary">Log out</Button>{' '}</Nav.Link>
                             </Stack> :
                             <Nav.Link as={Link} to="/login"><Button variant="outline-secondary">Login</Button>{' '}</Nav.Link>

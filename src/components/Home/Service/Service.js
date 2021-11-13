@@ -6,7 +6,7 @@ const Service = ({ service }) => {
     const { _id, img, name, short_d, price, day, location, description } = service;
     console.log(_id);
     return (
-        <div className="col-md-3">
+        <div className="col-md-4">
             {/* <div className="p-3">
                 <img src={img} className="img-fluid" alt=""></img>
             </div>

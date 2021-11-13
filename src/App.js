@@ -12,6 +12,8 @@ import Register from './components/Home/Ragister/Register';
 import Review from './components/Home/Riveiw/Review';
 import Service from './components/Home/Service/Service';
 import Services from './components/Home/Services/Services';
+import Footer from './components/Home/Footer/Footer';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -23,15 +25,15 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route path="/detailes/:serviceId">
+            <PrivateRoute path="/detailes/:serviceId">
               <Detailes></Detailes>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/aDashboard">
+            <PrivateRoute path="/aDashboard">
               <ADashBoard></ADashBoard>
-            </Route>
+            </PrivateRoute>
             <Route path="/myOrder">
               <MyOrder></MyOrder>
             </Route>
@@ -42,7 +44,7 @@ function App() {
               <Services></Services>
             </Route>
           </Switch>
-
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
 

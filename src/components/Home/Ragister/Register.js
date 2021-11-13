@@ -67,7 +67,7 @@ const Register = () => {
             <body class="text-center  login">
                 <div class="form-signin bg-light">
                     <div>
-                        <img class="mb-4" src="https://i.ibb.co/hZ1zdXy/logo-3.png" alt="" width="120" />
+                        <img class="mb-4" src="https://i.ibb.co/LtB9qW2/logo-color.webp" alt="" width="120" />
                         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
                         <div class="form-floating">
                             <input onBlur={handleNameChange} type="text" class="form-control" id="floatingInput" placeholder="Full Nmae" />
