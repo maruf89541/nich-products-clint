@@ -17,12 +17,12 @@ const Header = () => {
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end ms-auto">
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/service">service</Nav.Link>
+                        <Nav.Link as={Link} to="/services">service</Nav.Link>
                         {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
                         {
                             user?.email &&
                             <Navbar.Text className="signin-text">
-                                <Nav.Link as={Link} to="myBooking">{user.displayName}</Nav.Link>
+                                <Nav.Link as={Link} to="myOrder">{user.displayName}</Nav.Link>
                             </Navbar.Text>}
 
 

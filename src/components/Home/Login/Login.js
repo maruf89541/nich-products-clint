@@ -78,6 +78,7 @@ const Login = () => {
                         </div>
                         {/* <button class="w-100 btn btn-lg btn-dark" type="submit" onClick={handlelogin}>Log in</button> */}
 
+                        <button onClick={handlelogin} class="w-100 btn btn-lg btn-dark mt-3" type="submit">Log in</button>
                         <button onClick={handleGoogleLogin} class="w-100 btn btn-lg btn-warning mt-3" type="submit">Google</button>
                         <button class="w-100 btn btn-lg btn-primary mt-3" type="submit" >Facebook</button>
                         <div className="mt-3">New user?<Link to="/register">Register</Link></div>

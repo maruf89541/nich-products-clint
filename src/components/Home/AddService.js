@@ -16,7 +16,7 @@ const AddService = () => {
 
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://powerful-badlands-10709.herokuapp.com/services', data)
             .then(res => {
                 console.log(res);
                 reset();
@@ -25,29 +25,31 @@ const AddService = () => {
     }
     return (
         <div className="container">
-            <div className="add-service">
-                <h1>Add <span style={{ color: "#ff7c5b" }}>Service</span> </h1>
+            <div class="registration-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    {/* <div class="form-floating mb-3">
-                        <input {...register("Name", { required: true, maxLength: 20 })} placeholder="Name" class="form-control" id="floatingInput" />
-                        <label for="floatingInput">Email address</label>
+                    <h1>Add New Service</h1>
+                    <div class="form-group">
+                        <input class="form-control item" {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
                     </div>
-                    <div class="form-floating">
-                        <input type="number" {...register("price")} placeholder="Price" class="form-control" id="floatingPassword" />
-                        <label for="floatingPassword">Password</label>
-                    </div> */}
-                    <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
-                    <textarea {...register("description")} placeholder="description" />
-                    <input type="number" {...register("price")} placeholder="Price" />
-                    <input {...register("day")} placeholder="Day" />
-                    <input {...register("location")} placeholder="Location" />
-                    <input {...register("review")} placeholder="Review" />
-                    <input {...register("img")} placeholder="image-uri" />
-                    <button className="regular-btn" type="submit">Submit</button>
+                    <div class="form-group">
+                        <textarea type="text" class="form-control item" {...register("description")} placeholder="description" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control item" name="price"
+                            type='number'
+                            {...register("price")} placeholder="Price" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control item" {...register("img")} placeholder="image-uri" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit"
+                            value="Submit" class="btn btn-block create-account"></input>
+                    </div>
                 </form>
             </div>
-
         </div>
+
     );
 };
 

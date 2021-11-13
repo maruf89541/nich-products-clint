@@ -47,7 +47,19 @@ const Register = () => {
                 setUser(result.user)
                 history.push(redirect_uri);
                 setUserName()
+                saveUser(email, name, 'POST');
             })
+    }
+    const saveUser = (email, displayName, method) => {
+        const user = { email, displayName };
+        fetch('https://powerful-badlands-10709.herokuapp.com/users', {
+            method: method,
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then()
     }
 
     return (

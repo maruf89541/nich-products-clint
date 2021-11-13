@@ -6,14 +6,14 @@ import useAuth from '../../../Hook/useAuth';
 
 const Detailes = () => {
     const { serviceId } = useParams()
-    const [alServiceDetails, setEmployeesDetails] = useState([]);
+    const [allServiceDetails, setEmployeesDetails] = useState([]);
     const { user } = useAuth()
 
     const [singleServiceDetailes, setSingleEmployee] = useState({});
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('https://thawing-reef-26997.herokuapp.com/booking', data)
+        axios.post('https://powerful-badlands-10709.herokuapp.com/booking', data)
             .then(res => {
                 console.log(res);
                 reset();
@@ -23,18 +23,18 @@ const Detailes = () => {
 
     //  data load howa
     useEffect(() => {
-        fetch("http://localhost:5000/services")
+        fetch("https://powerful-badlands-10709.herokuapp.com/services")
             .then((res) => res.json())
             .then((data) => setEmployeesDetails(data));
     }, []);
 
     // call hbe jokon amar shob data load hye state e set hbe
     useEffect(() => {
-        const foundEmployee = alServiceDetails.find(
+        const foundEmployee = allServiceDetails.find(
             (employee) => employee._id === serviceId
         );
         setSingleEmployee(foundEmployee);
-    }, [alServiceDetails]);
+    }, [allServiceDetails]);
 
     return (
         <div className="container">
